@@ -19,6 +19,7 @@ Vous pouvez savoir quelle est la zone jouable dans la map (les 2 représentent l
 
 Les joueurs peuvent effectuer les actions suivantes :
 
+- TRAP: pose un piège sur une case (utilisable 1 fois par tour)
 - TELEPORT: se déplacer immédiatement sur une case du labyrinthe (1 fois par partie, réinitialisé à chaque kill)
 - MOVE: déplace le joueur dans une direction donnée (utilisable 2 fois par tour)
 - BUILD: construire un mur dans une direction donnée (utilisable 2 fois par tour)
@@ -26,7 +27,8 @@ Les joueurs peuvent effectuer les actions suivantes :
   - si la balle touche un joueur, il perd 1 PDV
   - si la balle touche un mur, il est détruit
   - la balle s'arrête au premier mur touché
-- TRAP: pose un piège sur une case (utilisable 1 fois par tour)
+ 
+L'ordre dans lequel est appliqué les actions est celui ci-dessus (e.g. les actions TRAP de tous les joueurs sont appliquées, puis les actions TELEPORT, puis les actions MOVE, etc)
 
 Si le joueur programme une action qui n’est pas autorisée, l'action est ignorée.
 
