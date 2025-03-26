@@ -15,6 +15,7 @@ Le but du jeu est de survivre le plus longtemps possible et de tuer les autres j
 Le jeu se déroule en "tours", à chaque tour, les joueurs choisissent leurs actions.
 
 Tous les 5 tours, la zone jouable rétrécit, les joueurs qui sont encore dans la mauvaise zone perdent 1 PDV par tour.
+Vous pouvez savoir quelle est la zone jouable dans la map (les 2 représentent la zone non jouable).
 
 Les joueurs peuvent effectuer les actions suivantes :
 
@@ -68,6 +69,7 @@ const map = [
   [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 ]
 ```
+Quand la zone rétrécit, l'array reste de la même taille, mais est bordé par des 2, qui représentent la lave (rester dans la lave fait perdre 1 PDV par tour).
 
 si map.length est 10, alors le labyrinthe est de 10 cases de large
 
